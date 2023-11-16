@@ -18,6 +18,6 @@ Set-SmbServerConfiguration -EnableSMB1Protocol $false
 $thunderbirdUrl = "https://download.mozilla.org/?product=thunderbird-latest&os=win&lang=en-US"
 $thunderbirdInstaller = "$env:TEMP\ThunderbirdSetup.exe"
 Invoke-WebRequest -Uri $thunderbirdUrl -OutFile $thunderbirdInstaller
-Start-Process -Wait -FilePath $thunderbirdInstaller
+start $thunderbirdInstaller /S
 
 Write-Host "Preparation completed successfully!"
